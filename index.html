@@ -1,1 +1,15 @@
+<!DOCTYPE html><html><head><title>Share your Google Sheets</title></head>
+<body>
+ 
+    <script>
+const base = 'https://docs.google.com/spreadsheets/d/10ZJUuhL0oLHDKkBTVkK_5oE8REf7_sRuaar3nFjomVE/gviz/tq?';
 
+    fetch(base)
+    .then(res => res.text())
+    .then(rep =>{
+        const data = JSON.parse(rep.substr(47).slice(0,-2));
+      console.log(data)
+    })
+    </script>
+</body>
+</html>
